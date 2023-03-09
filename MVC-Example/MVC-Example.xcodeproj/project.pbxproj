@@ -60,9 +60,7 @@
 		D7F34FC829B9F4AD00B8A2CA /* MVC-Example */ = {
 			isa = PBXGroup;
 			children = (
-				D7F34FDE29B9F4E400B8A2CA /* Model.swift */,
-				D7F34FE029B9F51500B8A2CA /* View.swift */,
-				D7F34FCD29B9F4AD00B8A2CA /* ViewController.swift */,
+				D7F34FE229BA003600B8A2CA /* TodoListMVC */,
 				D7F34FDD29B9F4BA00B8A2CA /* SupportFiles */,
 				D7F34FCF29B9F4AD00B8A2CA /* Main.storyboard */,
 				D7F34FD229B9F4AE00B8A2CA /* Assets.xcassets */,
@@ -79,6 +77,16 @@
 				D7F34FCB29B9F4AD00B8A2CA /* SceneDelegate.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		D7F34FE229BA003600B8A2CA /* TodoListMVC */ = {
+			isa = PBXGroup;
+			children = (
+				D7F34FDE29B9F4E400B8A2CA /* Model.swift */,
+				D7F34FE029B9F51500B8A2CA /* View.swift */,
+				D7F34FCD29B9F4AD00B8A2CA /* ViewController.swift */,
+			);
+			path = TodoListMVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
