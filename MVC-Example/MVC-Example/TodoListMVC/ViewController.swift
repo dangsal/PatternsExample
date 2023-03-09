@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var todoItems: [TodoItem] = []
+    var todoItems = Todolist()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         setupData()
         setupDelegation()
         setLayout()
+        setupNavBar()
     }
 
     private func setLayout() {
@@ -34,13 +35,17 @@ class ViewController: UIViewController {
         tableView.heightAnchor.constraint(equalToConstant: 500).isActive = true
     }
     
+    private func setupNavBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTodoItem))
+    }
+    
     private func setupDelegation() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     
     private func setupData() {
-        todoItems = [
+        todoItems.items = [
             TodoItem(title: "MVC 패턴 공부하기",
                      isCompleted: false),
             TodoItem(title: "코드리뷰하기",
@@ -50,27 +55,27 @@ class ViewController: UIViewController {
         ]
     }
     
-    private func addTodoItem(withTitle title: String) {
-        let newTodoItem = TodoItem(title: title, isCompleted: false)
-        todoItems.append(newTodoItem)
+    @objc private func addTodoItem() {
+        let newTodoItem = TodoItem(title: "추가되었다!", isCompleted: false)
+        todoItems.addItem(item: newTodoItem)
         tableView.reloadData()
     }
     
     private func toggleTodoOtemCompletion(at index: Int) {
-        todoItems[index].isCompleted = !todoItems[index].isCompleted
+        todoItems.toggleCompleted(at: index)
         tableView.reloadData()
     }
-
+    
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoItems.count
+        return todoItems.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoItemCell
-        let todoItem = todoItems[indexPath.row]
+        let todoItem = todoItems.items[indexPath.row]
         
         cell.configure(with: todoItem)
         return cell

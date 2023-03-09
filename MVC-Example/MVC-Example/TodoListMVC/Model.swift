@@ -11,3 +11,19 @@ struct TodoItem {
     var title: String
     var isCompleted: Bool
 }
+
+struct Todolist {
+    var items: [TodoItem] = []
+    
+    mutating func addItem(item: TodoItem) {
+        items.append(item)
+    }
+    
+    mutating func removeItem(at index: Int) {
+        items.remove(at: index)
+    }
+    
+    mutating func toggleCompleted(at index: Int) {
+        items[index].isCompleted = !items[index].isCompleted
+    }
+}
