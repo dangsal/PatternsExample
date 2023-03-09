@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var todoItems = Todolist()
+    var todoItems = TodoList()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
-    private func toggleTodoOtemCompletion(at index: Int) {
+    private func toggleTodoItemCompletion(at index: Int) {
         todoItems.toggleCompleted(at: index)
         tableView.reloadData()
     }
@@ -84,6 +84,6 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        toggleTodoOtemCompletion(at: indexPath.row)
+        toggleTodoItemCompletion(at: indexPath.row)
     }
 }

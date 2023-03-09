@@ -12,7 +12,7 @@ struct TodoItem {
     var isCompleted: Bool
 }
 
-struct Todolist {
+struct TodoList {
     var items: [TodoItem] = []
     
     mutating func addItem(item: TodoItem) {

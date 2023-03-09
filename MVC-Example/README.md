@@ -16,4 +16,7 @@ Swift에서는 UIViewController 클래스가 컨트롤러를 구현하는데 사
 
 ---
 
-그러나 이 예제에서 데이터
+구글에 있는 TodoList MVC 예제를 가져와서 데이터와 그 데이터를 조작하는 로직을 모델로 분리해 보았다. 
+기존 예제에서는 Model 부분에는 그냥 TodoItem 의 구조체만 존재했고, Controller 부분에서 
+addTodoItem 과 toggleTodoItemCompletion 함수가 존재하고 그 안에서 직접 데이터를 조작했다. 
+그래서 그 부분을 TodoList라는 구조체를 따로 만들어  
