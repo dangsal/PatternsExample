@@ -61,7 +61,7 @@ final class TodoView: UIView {
         navigationItem?.rightBarButtonItem = addButton
     }
     
-    func reloadTalbeView() {
+    func updateTableView() {
         self.tableView.reloadData()
     }
     

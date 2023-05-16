@@ -54,13 +54,13 @@ final class TodoViewController: UIViewController {
     
     private func toggleTodoItemCompletion(at index: Int) {
         self.todoItems.toggleCompleted(at: index)
-        self.todoView.reloadTalbeView()
+        self.todoView.updateTableView()
     }
     
     private func addTodoItem() {
         let newTodoItem = TodoItem(title: "추가되었다!", isCompleted: false)
         self.todoItems.addItem(item: newTodoItem)
-        self.todoView.reloadTalbeView()
+        self.todoView.updateTableView()
     }
 }
 
