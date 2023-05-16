@@ -42,11 +42,11 @@ final class MVCView: UIView {
     // MARK: - func
     
     private func setLayout() {
-        self.addSubview(tableView)
-        tableView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        self.addSubview(self.tableView)
+        self.tableView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        self.tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        self.tableView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }
     
     func configureDelegate(_ delegate: MVCViewDelegate & UITableViewDelegate & UITableViewDataSource) {
