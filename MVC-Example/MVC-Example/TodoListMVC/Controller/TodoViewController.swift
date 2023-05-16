@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class TodoViewController: UIViewController {
     
     // MARK: - ui component
     
-    private let mvcView: MVCView = MVCView()
+    private let todoView: TodoView = TodoView()
 
     // MARK: - property
     
@@ -27,18 +27,18 @@ final class ViewController: UIViewController {
     }
     
     override func loadView() {
-        self.view = self.mvcView
+        self.view = self.todoView
     }
     
     // MARK: - func
     
     private func setupNavBar() {
         guard let navigationController = self.navigationController else { return }
-        self.mvcView.configureNavigationBar(navigationController)
+        self.todoView.configureNavigationBar(navigationController)
     }
     
     private func setupDelegation() {
-        self.mvcView.configureDelegate(self)
+        self.todoView.configureDelegate(self)
     }
     
     private func setupData() {
@@ -54,19 +54,19 @@ final class ViewController: UIViewController {
     
     private func toggleTodoItemCompletion(at index: Int) {
         self.todoItems.toggleCompleted(at: index)
-        self.mvcView.reloadTalbeView()
+        self.todoView.reloadTalbeView()
     }
     
     private func addTodoItem() {
         let newTodoItem = TodoItem(title: "추가되었다!", isCompleted: false)
         self.todoItems.addItem(item: newTodoItem)
-        self.mvcView.reloadTalbeView()
+        self.todoView.reloadTalbeView()
     }
 }
 
 // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension TodoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.todoItems.items.count
     }
@@ -82,7 +82,7 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ViewController: UITableViewDelegate {
+extension TodoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.toggleTodoItemCompletion(at: indexPath.row)
     }
@@ -90,7 +90,7 @@ extension ViewController: UITableViewDelegate {
 
 // MARK: - MVCDelegate
 
-extension ViewController: MVCViewDelegate {
+extension TodoViewController: TodoViewDelegate {
     func addButtonDidTap() {
         self.addTodoItem()
     }

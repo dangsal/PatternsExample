@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol MVCViewDelegate: AnyObject {
+protocol TodoViewDelegate: AnyObject {
     func addButtonDidTap()
 }
 
-final class MVCView: UIView {
+final class TodoView: UIView {
     
     // MARK: - ui component
     
@@ -25,7 +25,7 @@ final class MVCView: UIView {
     
     // MARK: - property
     
-    private weak var delegate: MVCViewDelegate?
+    private weak var delegate: TodoViewDelegate?
     
     // MARK: - init
     
@@ -49,7 +49,7 @@ final class MVCView: UIView {
         self.tableView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }
     
-    func configureDelegate(_ delegate: MVCViewDelegate & UITableViewDelegate & UITableViewDataSource) {
+    func configureDelegate(_ delegate: TodoViewDelegate & UITableViewDelegate & UITableViewDataSource) {
         self.delegate = delegate
         self.tableView.delegate = delegate
         self.tableView.dataSource = delegate
