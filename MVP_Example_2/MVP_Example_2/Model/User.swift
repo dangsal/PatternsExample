@@ -7,5 +7,6 @@
 
 struct User {
     let name: String
-    let age: Int
+    let emial: String
+    let userName: String
 }
