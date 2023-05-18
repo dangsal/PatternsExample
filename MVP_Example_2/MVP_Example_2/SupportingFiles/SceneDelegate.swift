@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MVVMDog
+//  MVP_Example_2
 //
-//  Created by 이성호 on 2023/04/11.
+//  Created by 이성호 on 2023/05/17.
 //
 
 import UIKit
