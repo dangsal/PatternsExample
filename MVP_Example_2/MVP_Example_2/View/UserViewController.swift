@@ -28,7 +28,7 @@ final class UserViewController: UIViewController, UserViewDelegate {
     
     // MARK: - property
 
-    private let presenter: UserPresenter = UserPresenter()
+    private let presenter: UserPresenter = UserPresenter(userService: UserService())
     
     // MARK: - life cycle
 
