@@ -58,7 +58,9 @@ final class UserViewController: UIViewController, UserViewDelegate {
     }
     
     func updateView() {
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func presentAlert(title: String, message: String) {
