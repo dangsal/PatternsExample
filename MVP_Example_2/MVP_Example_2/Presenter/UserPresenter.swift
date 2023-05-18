@@ -51,6 +51,6 @@ final class UserPresenter: UserPresenterDelegate {
     }
     
     func didTapUser(user: User) {
-        presentAlert(title: user.name, message: "\(user.name) has an email of \(user.email) and a username of \(user.userName)")
+        presentAlert(title: user.name, message: "이름은 \(user.name) 이고 이메일은:\(user.email) \n 닉네임은 \(user.userName)입니다")
     }
 }
