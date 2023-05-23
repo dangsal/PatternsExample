@@ -22,6 +22,7 @@
 		D77D39812A1751A700722CFA /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D39802A1751A700722CFA /* ArticleListViewModel.swift */; };
 		D77D39832A17626100722CFA /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D39822A17626100722CFA /* ArticleTableViewCell.swift */; };
 		D77D39862A1BA13300722CFA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D39852A1BA13300722CFA /* Observable.swift */; };
+		D77D39882A1C482F00722CFA /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D39872A1C482F00722CFA /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D77D39802A1751A700722CFA /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		D77D39822A17626100722CFA /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		D77D39852A1BA13300722CFA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D77D39872A1C482F00722CFA /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D77D39802A1751A700722CFA /* ArticleListViewModel.swift */,
+				D77D39872A1C482F00722CFA /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				D77D397F2A1749CC00722CFA /* WebService.swift in Sources */,
 				D77D397A2A17492400722CFA /* Article.swift in Sources */,
 				D77D394A2A17475900722CFA /* NewsListViewController.swift in Sources */,
+				D77D39882A1C482F00722CFA /* ArticleViewModel.swift in Sources */,
 				D77D397C2A17498800722CFA /* ArticleList.swift in Sources */,
 				D77D39862A1BA13300722CFA /* Observable.swift in Sources */,
 				D77D39832A17626100722CFA /* ArticleTableViewCell.swift in Sources */,

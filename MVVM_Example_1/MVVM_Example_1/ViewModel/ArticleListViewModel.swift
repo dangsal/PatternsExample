@@ -25,20 +25,3 @@ struct ArticleListViewModel {
         return ArticleViewModel(article)
     }
 }
-
-struct ArticleViewModel {
-    
-    private let article: Article
-    
-    init(_ article: Article) {
-        self.article = article
-    }
-    
-    var title: String? {
-        return self.article.title
-    }
-    
-    var description: String? {
-        return self.article.description
-    }
-}
