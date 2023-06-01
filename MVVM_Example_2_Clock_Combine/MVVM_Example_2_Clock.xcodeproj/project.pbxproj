@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D707C2602A285EC7001C070B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C25F2A285EC7001C070B /* AppDelegate.swift */; };
+		D707C2622A285EC7001C070B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2612A285EC7001C070B /* SceneDelegate.swift */; };
+		D707C2642A285EC7001C070B /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2632A285EC7001C070B /* ClockViewController.swift */; };
+		D707C2672A285EC7001C070B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D707C2652A285EC7001C070B /* Main.storyboard */; };
+		D707C2692A285EC9001C070B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D707C2682A285EC9001C070B /* Assets.xcassets */; };
+		D707C26C2A285EC9001C070B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D707C26A2A285EC9001C070B /* LaunchScreen.storyboard */; };
+		D707C2772A285EC9001C070B /* MVVM_Example_2_ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2762A285EC9001C070B /* MVVM_Example_2_ClockTests.swift */; };
+		D707C2812A285EC9001C070B /* MVVM_Example_2_ClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2802A285EC9001C070B /* MVVM_Example_2_ClockUITests.swift */; };
+		D707C2832A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2822A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift */; };
+		D707C2962A28609C001C070B /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2952A28609C001C070B /* ClockViewModel.swift */; };
+		D707C2982A2860A2001C070B /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2972A2860A2001C070B /* Clock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D707C2732A285EC9001C070B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D707C2542A285EC7001C070B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D707C25B2A285EC7001C070B;
+			remoteInfo = MVVM_Example_2_Clock;
+		};
+		D707C27D2A285EC9001C070B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D707C2542A285EC7001C070B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D707C25B2A285EC7001C070B;
+			remoteInfo = MVVM_Example_2_Clock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D707C25C2A285EC7001C070B /* MVVM_Example_2_Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Example_2_Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D707C25F2A285EC7001C070B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D707C2612A285EC7001C070B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D707C2632A285EC7001C070B /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		D707C2662A285EC7001C070B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D707C2682A285EC9001C070B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D707C26B2A285EC9001C070B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D707C26D2A285EC9001C070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D707C2722A285EC9001C070B /* MVVM_Example_2_ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_Example_2_ClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D707C2762A285EC9001C070B /* MVVM_Example_2_ClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_2_ClockTests.swift; sourceTree = "<group>"; };
+		D707C27C2A285EC9001C070B /* MVVM_Example_2_ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_Example_2_ClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D707C2802A285EC9001C070B /* MVVM_Example_2_ClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_2_ClockUITests.swift; sourceTree = "<group>"; };
+		D707C2822A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_2_ClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D707C2952A28609C001C070B /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		D707C2972A2860A2001C070B /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D707C2592A285EC7001C070B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C26F2A285EC9001C070B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C2792A285EC9001C070B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D707C2532A285EC7001C070B = {
+			isa = PBXGroup;
+			children = (
+				D707C25E2A285EC7001C070B /* MVVM_Example_2_Clock */,
+				D707C2752A285EC9001C070B /* MVVM_Example_2_ClockTests */,
+				D707C27F2A285EC9001C070B /* MVVM_Example_2_ClockUITests */,
+				D707C25D2A285EC7001C070B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D707C25D2A285EC7001C070B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D707C25C2A285EC7001C070B /* MVVM_Example_2_Clock.app */,
+				D707C2722A285EC9001C070B /* MVVM_Example_2_ClockTests.xctest */,
+				D707C27C2A285EC9001C070B /* MVVM_Example_2_ClockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D707C25E2A285EC7001C070B /* MVVM_Example_2_Clock */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2992A286A9B001C070B /* Helper */,
+				D707C2902A285ED8001C070B /* Models */,
+				D707C2922A285EFC001C070B /* Views */,
+				D707C2912A285EF8001C070B /* ViewModels */,
+				D707C28F2A285ECD001C070B /* SupportingFiles */,
+				D707C26D2A285EC9001C070B /* Info.plist */,
+			);
+			path = MVVM_Example_2_Clock;
+			sourceTree = "<group>";
+		};
+		D707C2752A285EC9001C070B /* MVVM_Example_2_ClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2762A285EC9001C070B /* MVVM_Example_2_ClockTests.swift */,
+			);
+			path = MVVM_Example_2_ClockTests;
+			sourceTree = "<group>";
+		};
+		D707C27F2A285EC9001C070B /* MVVM_Example_2_ClockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2802A285EC9001C070B /* MVVM_Example_2_ClockUITests.swift */,
+				D707C2822A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift */,
+			);
+			path = MVVM_Example_2_ClockUITests;
+			sourceTree = "<group>";
+		};
+		D707C28F2A285ECD001C070B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2652A285EC7001C070B /* Main.storyboard */,
+				D707C2682A285EC9001C070B /* Assets.xcassets */,
+				D707C26A2A285EC9001C070B /* LaunchScreen.storyboard */,
+				D707C25F2A285EC7001C070B /* AppDelegate.swift */,
+				D707C2612A285EC7001C070B /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D707C2902A285ED8001C070B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2972A2860A2001C070B /* Clock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D707C2912A285EF8001C070B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2952A28609C001C070B /* ClockViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D707C2922A285EFC001C070B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D707C2632A285EC7001C070B /* ClockViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D707C2992A286A9B001C070B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D707C25B2A285EC7001C070B /* MVVM_Example_2_Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D707C2862A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_Clock" */;
+			buildPhases = (
+				D707C2582A285EC7001C070B /* Sources */,
+				D707C2592A285EC7001C070B /* Frameworks */,
+				D707C25A2A285EC7001C070B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVVM_Example_2_Clock;
+			productName = MVVM_Example_2_Clock;
+			productReference = D707C25C2A285EC7001C070B /* MVVM_Example_2_Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D707C2712A285EC9001C070B /* MVVM_Example_2_ClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D707C2892A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_ClockTests" */;
+			buildPhases = (
+				D707C26E2A285EC9001C070B /* Sources */,
+				D707C26F2A285EC9001C070B /* Frameworks */,
+				D707C2702A285EC9001C070B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D707C2742A285EC9001C070B /* PBXTargetDependency */,
+			);
+			name = MVVM_Example_2_ClockTests;
+			productName = MVVM_Example_2_ClockTests;
+			productReference = D707C2722A285EC9001C070B /* MVVM_Example_2_ClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D707C27B2A285EC9001C070B /* MVVM_Example_2_ClockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D707C28C2A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_ClockUITests" */;
+			buildPhases = (
+				D707C2782A285EC9001C070B /* Sources */,
+				D707C2792A285EC9001C070B /* Frameworks */,
+				D707C27A2A285EC9001C070B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D707C27E2A285EC9001C070B /* PBXTargetDependency */,
+			);
+			name = MVVM_Example_2_ClockUITests;
+			productName = MVVM_Example_2_ClockUITests;
+			productReference = D707C27C2A285EC9001C070B /* MVVM_Example_2_ClockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D707C2542A285EC7001C070B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D707C25B2A285EC7001C070B = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					D707C2712A285EC9001C070B = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = D707C25B2A285EC7001C070B;
+					};
+					D707C27B2A285EC9001C070B = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = D707C25B2A285EC7001C070B;
+					};
+				};
+			};
+			buildConfigurationList = D707C2572A285EC7001C070B /* Build configuration list for PBXProject "MVVM_Example_2_Clock" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D707C2532A285EC7001C070B;
+			productRefGroup = D707C25D2A285EC7001C070B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D707C25B2A285EC7001C070B /* MVVM_Example_2_Clock */,
+				D707C2712A285EC9001C070B /* MVVM_Example_2_ClockTests */,
+				D707C27B2A285EC9001C070B /* MVVM_Example_2_ClockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D707C25A2A285EC7001C070B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D707C26C2A285EC9001C070B /* LaunchScreen.storyboard in Resources */,
+				D707C2692A285EC9001C070B /* Assets.xcassets in Resources */,
+				D707C2672A285EC7001C070B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C2702A285EC9001C070B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C27A2A285EC9001C070B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D707C2582A285EC7001C070B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D707C2642A285EC7001C070B /* ClockViewController.swift in Sources */,
+				D707C2602A285EC7001C070B /* AppDelegate.swift in Sources */,
+				D707C2622A285EC7001C070B /* SceneDelegate.swift in Sources */,
+				D707C2962A28609C001C070B /* ClockViewModel.swift in Sources */,
+				D707C2982A2860A2001C070B /* Clock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C26E2A285EC9001C070B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D707C2772A285EC9001C070B /* MVVM_Example_2_ClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D707C2782A285EC9001C070B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D707C2812A285EC9001C070B /* MVVM_Example_2_ClockUITests.swift in Sources */,
+				D707C2832A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D707C2742A285EC9001C070B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D707C25B2A285EC7001C070B /* MVVM_Example_2_Clock */;
+			targetProxy = D707C2732A285EC9001C070B /* PBXContainerItemProxy */;
+		};
+		D707C27E2A285EC9001C070B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D707C25B2A285EC7001C070B /* MVVM_Example_2_Clock */;
+			targetProxy = D707C27D2A285EC9001C070B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D707C2652A285EC7001C070B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D707C2662A285EC7001C070B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D707C26A2A285EC9001C070B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D707C26B2A285EC9001C070B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D707C2842A285EC9001C070B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D707C2852A285EC9001C070B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D707C2872A285EC9001C070B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVVM_Example_2_Clock/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-Clock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D707C2882A285EC9001C070B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVVM_Example_2_Clock/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-Clock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D707C28A2A285EC9001C070B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-ClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Example_2_Clock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVM_Example_2_Clock";
+			};
+			name = Debug;
+		};
+		D707C28B2A285EC9001C070B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-ClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Example_2_Clock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVM_Example_2_Clock";
+			};
+			name = Release;
+		};
+		D707C28D2A285EC9001C070B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-ClockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVM_Example_2_Clock;
+			};
+			name = Debug;
+		};
+		D707C28E2A285EC9001C070B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGZ8HP6A2J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dangsal.MVVM-Example-2-ClockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVM_Example_2_Clock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D707C2572A285EC7001C070B /* Build configuration list for PBXProject "MVVM_Example_2_Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D707C2842A285EC9001C070B /* Debug */,
+				D707C2852A285EC9001C070B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D707C2862A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D707C2872A285EC9001C070B /* Debug */,
+				D707C2882A285EC9001C070B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D707C2892A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_ClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D707C28A2A285EC9001C070B /* Debug */,
+				D707C28B2A285EC9001C070B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D707C28C2A285EC9001C070B /* Build configuration list for PBXNativeTarget "MVVM_Example_2_ClockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D707C28D2A285EC9001C070B /* Debug */,
+				D707C28E2A285EC9001C070B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D707C2542A285EC7001C070B /* Project object */;
+}
