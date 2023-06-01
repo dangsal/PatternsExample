@@ -16,7 +16,7 @@ final class Clock {
         let seconds = Calendar.current.component(.second, from: today)
         
         let minString = String(format: "%02d", minutes)
-        let secString = String(format: "$02d", seconds)
+        let secString = String(format: "%02d", seconds)
         
         return "\(hours):\(minString):\(secString)"
     }

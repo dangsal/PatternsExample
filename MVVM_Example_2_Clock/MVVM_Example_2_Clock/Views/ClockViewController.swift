@@ -57,6 +57,7 @@ final class ClockViewController: UIViewController {
         self.setupLayout()
 //        3-1. setBindings() 실행
         self.setBindings()
+        self.setTimer()
     }
     
     // MARK: - func
@@ -101,7 +102,10 @@ final class ClockViewController: UIViewController {
     
 //    3. 어떠한 행동은 여기에 저장됨 (didChangeTime에 클로저의 동작을 담아 저장 시킨다.)
     private func setBindings() {
-        
+//        5. viewModel의 didChangeTime 클로저 를 정의 하고 실행한다.
+        viewModel.didChangeTime = { [weak self] viewModel in
+            self?.closureTimeLabel.text = viewModel.closureTime
+        }
     }
 }
 
