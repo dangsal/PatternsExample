@@ -84,5 +84,11 @@ final class ClockViewController: UIViewController {
         self.combineTimeLabel.topAnchor.constraint(equalTo: self.combineLabel.bottomAnchor, constant: 20).isActive = true
         self.combineTimeLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
+    
+    private func setTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            
+        }
+    }
 }
 
