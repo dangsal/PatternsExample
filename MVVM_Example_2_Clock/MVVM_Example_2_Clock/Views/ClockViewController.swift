@@ -44,11 +44,19 @@ final class ClockViewController: UIViewController {
         label.text = "Time"
         return label
     }()
+    
+    // MARK: - property
+    
+//    1. 뷰 모델 생성
+    private let viewModel = ClockViewModel()
+    
     // MARK: - life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
+//        3-1. setBindings() 실행
+        self.setBindings()
     }
     
     // MARK: - func
@@ -89,6 +97,11 @@ final class ClockViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
         }
+    }
+    
+//    3. 어떠한 행동은 여기에 저장됨 (didChangeTime에 클로저의 동작을 담아 저장 시킨다.)
+    private func setBindings() {
+        
     }
 }
 
