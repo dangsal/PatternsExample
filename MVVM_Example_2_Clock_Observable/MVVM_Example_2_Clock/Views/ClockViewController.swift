@@ -46,6 +46,8 @@ final class ClockViewController: UIViewController {
     }()
     
     // MARK: - property
+//    1. 뷰모델 생성
+    private var viewModel: ClockViewModel = ClockViewModel()
     
     // MARK: - life cycle
     
@@ -53,6 +55,8 @@ final class ClockViewController: UIViewController {
         super.viewDidLoad()
         self.setupLayout()
         self.setTimer()
+//        2. setBindings() 실행
+        self.setBindings()
     }
     
     // MARK: - func
@@ -88,10 +92,17 @@ final class ClockViewController: UIViewController {
         self.combineTimeLabel.topAnchor.constraint(equalTo: self.combineLabel.bottomAnchor, constant: 20).isActive = true
         self.combineTimeLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
-    
+//    4. 매 초마다 시간을 업데이트 (checkTime 실행)
     private func setTimer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-
+            self?.viewModel.checkTime()
+        }
+    }
+    
+    private func setBindings() {
+//        3. 정의해 둔 bind 메서드를 통해서 text를 업데이트 한다.
+        viewModel.observableTime.bind { [weak self] time in
+            self?.observableTimeLabel.text = time
         }
     }
 }
