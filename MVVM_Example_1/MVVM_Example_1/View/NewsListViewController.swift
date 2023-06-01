@@ -29,6 +29,7 @@ class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
+        self.setupNavigationBar()
         self.fetchArticleList()
     }
     
@@ -40,6 +41,11 @@ class NewsListViewController: UIViewController {
         self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationItem.title = "News"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func fetchArticleList() {
