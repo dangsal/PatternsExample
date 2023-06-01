@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import Combine
 
 final class ClockViewModel {
     
-
+    @Published var combineTime: String = "Combine"
+    
+    func checkTime() {
+        combineTime = Clock.currentTime()
+    }
 }

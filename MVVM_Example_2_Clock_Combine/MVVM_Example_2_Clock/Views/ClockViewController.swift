@@ -4,7 +4,7 @@
 //
 //  Created by 이성호 on 2023/06/01.
 //
-
+import Combine
 import UIKit
 
 final class ClockViewController: UIViewController {
@@ -47,12 +47,18 @@ final class ClockViewController: UIViewController {
     
     // MARK: - property
     
+    private let viewModel: ClockViewModel = ClockViewModel()
+    
+    // 메모리 관리를 위해 취소를 자동으로 해주는 AnyCancellable 만들어준다.뷰컨이 해제되면 자동으로 cancel()을 실행
+    private var cancellables: Set<AnyCancellable> = []
+    
     // MARK: - life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
         self.setTimer()
+        self.setBindings()
     }
     
     // MARK: - func
@@ -91,10 +97,15 @@ final class ClockViewController: UIViewController {
 
     private func setTimer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-
+            self?.viewModel.checkTime()
         }
     }
     
-
+    private func setBindings() {
+        viewModel.$combineTime
+            .compactMap { String($0) }
+            .assign(to: \.text, on: self.combineTimeLabel)
+            .store(in: &cancellables)
+    }
 }
 
