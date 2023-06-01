@@ -16,6 +16,7 @@
 		D7A946822A2889F5001E2CE1 /* MVVM_Example_textfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A946812A2889F5001E2CE1 /* MVVM_Example_textfieldTests.swift */; };
 		D7A9468C2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9468B2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift */; };
 		D7A9468E2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9468D2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift */; };
+		D7A946A02A288A5C001E2CE1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9469F2A288A5C001E2CE1 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D7A946872A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_Example_textfieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A9468B2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_textfieldUITests.swift; sourceTree = "<group>"; };
 		D7A9468D2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_textfieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7A9469F2A288A5C001E2CE1 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D7A946692A2889F4001E2CE1 /* MVVM_Example_textfield */ = {
 			isa = PBXGroup;
 			children = (
+				D7A9469E2A288A50001E2CE1 /* Helpers */,
 				D7A9469D2A288A10001E2CE1 /* Models */,
 				D7A9469C2A288A0E001E2CE1 /* Views */,
 				D7A9469B2A288A04001E2CE1 /* ViewModels */,
@@ -157,6 +160,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D7A9469E2A288A50001E2CE1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7A9469F2A288A5C001E2CE1 /* Observable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A946A02A288A5C001E2CE1 /* Observable.swift in Sources */,
 				D7A9466F2A2889F4001E2CE1 /* ViewController.swift in Sources */,
 				D7A9466B2A2889F4001E2CE1 /* AppDelegate.swift in Sources */,
 				D7A9466D2A2889F4001E2CE1 /* SceneDelegate.swift in Sources */,
