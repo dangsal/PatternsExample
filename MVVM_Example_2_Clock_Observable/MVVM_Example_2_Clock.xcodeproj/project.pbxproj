@@ -18,6 +18,7 @@
 		D707C2832A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2822A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift */; };
 		D707C2962A28609C001C070B /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2952A28609C001C070B /* ClockViewModel.swift */; };
 		D707C2982A2860A2001C070B /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C2972A2860A2001C070B /* Clock.swift */; };
+		D707C29B2A286AA8001C070B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707C29A2A286AA8001C070B /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D707C2822A285EC9001C070B /* MVVM_Example_2_ClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_2_ClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D707C2952A28609C001C070B /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 		D707C2972A2860A2001C070B /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		D707C29A2A286AA8001C070B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		D707C25E2A285EC7001C070B /* MVVM_Example_2_Clock */ = {
 			isa = PBXGroup;
 			children = (
+				D707C2992A286A9B001C070B /* Helper */,
 				D707C2902A285ED8001C070B /* Models */,
 				D707C2922A285EFC001C070B /* Views */,
 				D707C2912A285EF8001C070B /* ViewModels */,
@@ -163,6 +166,14 @@
 				D707C2632A285EC7001C070B /* ClockViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D707C2992A286A9B001C070B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D707C29A2A286AA8001C070B /* Observable.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 				D707C2602A285EC7001C070B /* AppDelegate.swift in Sources */,
 				D707C2622A285EC7001C070B /* SceneDelegate.swift in Sources */,
 				D707C2962A28609C001C070B /* ClockViewModel.swift in Sources */,
+				D707C29B2A286AA8001C070B /* Observable.swift in Sources */,
 				D707C2982A2860A2001C070B /* Clock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
