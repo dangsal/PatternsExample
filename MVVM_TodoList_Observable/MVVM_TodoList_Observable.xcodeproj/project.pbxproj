@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7415F732A28AD7800A71960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F722A28AD7800A71960 /* AppDelegate.swift */; };
 		D7415F752A28AD7800A71960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F742A28AD7800A71960 /* SceneDelegate.swift */; };
-		D7415F772A28AD7800A71960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F762A28AD7800A71960 /* ViewController.swift */; };
+		D7415F772A28AD7800A71960 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F762A28AD7800A71960 /* TodoViewController.swift */; };
 		D7415F7A2A28AD7800A71960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7415F782A28AD7800A71960 /* Main.storyboard */; };
 		D7415F7C2A28AD7900A71960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7415F7B2A28AD7900A71960 /* Assets.xcassets */; };
 		D7415F7F2A28AD7900A71960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7415F7D2A28AD7900A71960 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		D7415F942A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F932A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift */; };
 		D7415F962A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F952A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift */; };
 		D7415FA82A28AE8C00A71960 /* Obseervable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415FA72A28AE8C00A71960 /* Obseervable.swift */; };
+		D7415FAA2A28AF6000A71960 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415FA92A28AF6000A71960 /* TodoItem.swift */; };
+		D7415FAC2A28AF8D00A71960 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415FAB2A28AF8D00A71960 /* TodoViewModel.swift */; };
+		D7415FAE2A28B0B100A71960 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415FAD2A28B0B100A71960 /* TodoItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		D7415F6F2A28AD7800A71960 /* MVVM_TodoList_Observable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_TodoList_Observable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7415F722A28AD7800A71960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7415F742A28AD7800A71960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7415F762A28AD7800A71960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7415F762A28AD7800A71960 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		D7415F792A28AD7800A71960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7415F7B2A28AD7900A71960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7415F7E2A28AD7900A71960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		D7415F932A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_TodoList_ObservableUITests.swift; sourceTree = "<group>"; };
 		D7415F952A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_TodoList_ObservableUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D7415FA72A28AE8C00A71960 /* Obseervable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obseervable.swift; sourceTree = "<group>"; };
+		D7415FA92A28AF6000A71960 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		D7415FAB2A28AF8D00A71960 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		D7415FAD2A28B0B100A71960 /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		D7415FA32A28AD8D00A71960 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D7415FAB2A28AF8D00A71960 /* TodoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -150,7 +157,8 @@
 		D7415FA42A28AD9100A71960 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D7415F762A28AD7800A71960 /* ViewController.swift */,
+				D7415F762A28AD7800A71960 /* TodoViewController.swift */,
+				D7415FAD2A28B0B100A71960 /* TodoItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 		D7415FA52A28AD9400A71960 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7415FA92A28AF6000A71960 /* TodoItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7415F772A28AD7800A71960 /* ViewController.swift in Sources */,
+				D7415FAC2A28AF8D00A71960 /* TodoViewModel.swift in Sources */,
+				D7415FAA2A28AF6000A71960 /* TodoItem.swift in Sources */,
+				D7415F772A28AD7800A71960 /* TodoViewController.swift in Sources */,
 				D7415F732A28AD7800A71960 /* AppDelegate.swift in Sources */,
 				D7415FA82A28AE8C00A71960 /* Obseervable.swift in Sources */,
+				D7415FAE2A28B0B100A71960 /* TodoItemCell.swift in Sources */,
 				D7415F752A28AD7800A71960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
