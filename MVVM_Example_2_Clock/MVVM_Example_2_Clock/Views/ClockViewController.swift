@@ -94,8 +94,8 @@ final class ClockViewController: UIViewController {
     }
     
     private func setTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.viewModel.checkTime()
         }
     }
     
