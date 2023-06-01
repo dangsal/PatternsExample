@@ -16,6 +16,7 @@
 		D7415F8A2A28AD7900A71960 /* MVVM_TodoList_ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F892A28AD7900A71960 /* MVVM_TodoList_ObservableTests.swift */; };
 		D7415F942A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F932A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift */; };
 		D7415F962A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415F952A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift */; };
+		D7415FA82A28AE8C00A71960 /* Obseervable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7415FA72A28AE8C00A71960 /* Obseervable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D7415F8F2A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_TodoList_ObservableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7415F932A28AD7900A71960 /* MVVM_TodoList_ObservableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_TodoList_ObservableUITests.swift; sourceTree = "<group>"; };
 		D7415F952A28AD7900A71960 /* MVVM_TodoList_ObservableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_TodoList_ObservableUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7415FA72A28AE8C00A71960 /* Obseervable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obseervable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		D7415FA62A28AD9700A71960 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D7415FA72A28AE8C00A71960 /* Obseervable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			files = (
 				D7415F772A28AD7800A71960 /* ViewController.swift in Sources */,
 				D7415F732A28AD7800A71960 /* AppDelegate.swift in Sources */,
+				D7415FA82A28AE8C00A71960 /* Obseervable.swift in Sources */,
 				D7415F752A28AD7800A71960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
