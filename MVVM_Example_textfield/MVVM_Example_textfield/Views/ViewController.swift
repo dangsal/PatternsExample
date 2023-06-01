@@ -25,11 +25,15 @@ class ViewController: UIViewController {
 
     // MARK: - property
     
+    private let viewModel: ViewModel = ViewModel()
+    
     // MARK: - life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
+        self.setupTextField()
+        self.setBindings()
     }
     
     // MARK: - func
@@ -46,6 +50,23 @@ class ViewController: UIViewController {
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor, constant: 50).isActive = true
         self.nameLabel.centerXAnchor.constraint(equalTo: self.nameTextField.centerXAnchor).isActive = true
+    }
+    
+    private func setupTextField() {
+        self.nameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    private func setBindings() {
+        self.viewModel.name.bind { [weak self] name in
+            self?.nameLabel.text = name
+        }
+    }
+    
+    // MARK: - selector
+    
+    @objc
+    private func textFieldDidChange(_ textField: UITextField) {
+        viewModel.name.value = textField.text ?? ""
     }
 }
 

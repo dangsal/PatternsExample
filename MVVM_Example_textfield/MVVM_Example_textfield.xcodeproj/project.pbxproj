@@ -17,6 +17,7 @@
 		D7A9468C2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9468B2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift */; };
 		D7A9468E2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9468D2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift */; };
 		D7A946A02A288A5C001E2CE1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9469F2A288A5C001E2CE1 /* Observable.swift */; };
+		D7A946A22A288D26001E2CE1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A946A12A288D26001E2CE1 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D7A9468B2A2889F5001E2CE1 /* MVVM_Example_textfieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_textfieldUITests.swift; sourceTree = "<group>"; };
 		D7A9468D2A2889F5001E2CE1 /* MVVM_Example_textfieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Example_textfieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D7A9469F2A288A5C001E2CE1 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D7A946A12A288D26001E2CE1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		D7A9469B2A288A04001E2CE1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D7A946A12A288D26001E2CE1 /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A946A22A288D26001E2CE1 /* ViewModel.swift in Sources */,
 				D7A946A02A288A5C001E2CE1 /* Observable.swift in Sources */,
 				D7A9466F2A2889F4001E2CE1 /* ViewController.swift in Sources */,
 				D7A9466B2A2889F4001E2CE1 /* AppDelegate.swift in Sources */,
