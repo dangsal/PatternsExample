@@ -23,12 +23,12 @@ class DangsalSubscriber: Subscriber {
     // subscriber에게 publisher 를 성공적으로 구독했음을 알리고 item을 요청 할 수 있음
     func receive(subscription: Subscription) {
         print("구독 시작")
-        subscription.request(.unlimited)
+        subscription.request(.max(1))
     }
     // subsriber에게 publisher 가 element를 생성했음을 알림
     func receive(_ input: String) -> Subscribers.Demand {
         print("\(input)")
-        return .none
+        return .max(1)
     }
     // subscriber에게 publisher가 정상적으로 또는 오류로 publish를 완료했음을 알림
     func receive(completion: Subscribers.Completion<Never>) {
@@ -38,3 +38,9 @@ class DangsalSubscriber: Subscriber {
 
 let name = Just("Lee Sung Ho")
 name.subscribe(DangsalSubscriber())
+
+print("------------------------------------------------------------------------")
+
+
+let names = ["hoya", "ginger", "chemi", "mary", "id"].publisher
+names.print().subscribe(DangsalSubscriber())
