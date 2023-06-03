@@ -86,3 +86,43 @@ just
         print("received value: \(value)")
     }
 
+print("----------------------------------Future-------------------------------------")
+
+var subscriptions = Set<AnyCancellable>()
+var emitValue: Int = 0
+var delay: TimeInterval = 3
+
+func createFuture() -> Future<Int, Never> {
+    return Future<Int, Never> { promise in
+        delay -= 1
+        print("\(delay)")
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            emitValue += 1
+            promise(.success(emitValue))
+        }
+    }
+}
+
+let firstFuture = createFuture()
+let secondFuture = createFuture()
+let thirdFuture = createFuture()
+
+firstFuture
+    .sink(receiveCompletion: { print("첫번째 Future Completion: \($0)") },
+          receiveValue: { print("첫번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+secondFuture
+    .sink(receiveCompletion: { print("두번째 Future completion: \($0)") },
+          receiveValue: { print("두번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+thirdFuture
+    .sink(receiveCompletion: { print("세번째 Future completion: \($0)") },
+          receiveValue: { print("세번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+thirdFuture
+    .sink(receiveCompletion: { print("세번째 Future completion2: \($0)") },
+          receiveValue: { print("세번째 Future value2: \($0)") })
+    .store(in: &subscriptions)
