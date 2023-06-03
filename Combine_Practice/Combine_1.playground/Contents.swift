@@ -76,4 +76,13 @@ let intArray: [Int] = [1, 2, 3, 4, 5]
 intArray.publisher
     .subscribe(IntSubscriber())
 
-print("----------------------------------5-------------------------------------")
+print("----------------------------------Just-------------------------------------")
+
+let just = Just("This is Output")
+just
+    .sink { completion in
+        print("received completion: \(completion)")
+    } receiveValue: { value in
+        print("received value: \(value)")
+    }
+
