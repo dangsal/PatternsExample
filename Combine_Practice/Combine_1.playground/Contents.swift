@@ -13,7 +13,8 @@ let publisher = Just("dangsal").sink { result in
 } receiveValue: { value in
     print(value)
 }
-print("--------------------------------------------------------------------")
+// Future로 publisher 생성
+print("------------------------------1-------------------------------------")
 // -----------------------------------------------------------------------------------------
 class DangsalSubscriber: Subscriber {
     typealias Input = String
@@ -39,8 +40,40 @@ class DangsalSubscriber: Subscriber {
 let name = Just("Lee Sung Ho")
 name.subscribe(DangsalSubscriber())
 
-print("------------------------------------------------------------------------")
+print("-----------------------------------2------------------------------------")
 
 
 let names = ["hoya", "ginger", "chemi", "mary", "id"].publisher
 names.print().subscribe(DangsalSubscriber())
+
+print("----------------------------------3-------------------------------------")
+
+names.print().sink { print($0) }
+
+print("----------------------------------4-------------------------------------")
+
+class IntSubscriber: Subscriber {
+    typealias Input = Int
+    
+    typealias Failure = Never
+    
+    func receive(subscription: Subscription) {
+        subscription.request(.unlimited)
+    }
+    func receive(_ input: Int) -> Subscribers.Demand {
+        print(input)
+        return .none
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {
+        
+    }
+    
+}
+
+let intArray: [Int] = [1, 2, 3, 4, 5]
+
+intArray.publisher
+    .subscribe(IntSubscriber())
+
+print("----------------------------------5-------------------------------------")
