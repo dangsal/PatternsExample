@@ -107,22 +107,47 @@ let firstFuture = createFuture()
 let secondFuture = createFuture()
 let thirdFuture = createFuture()
 
-firstFuture
-    .sink(receiveCompletion: { print("첫번째 Future Completion: \($0)") },
-          receiveValue: { print("첫번째 Future value: \($0)") })
-    .store(in: &subscriptions)
+//firstFuture
+//    .sink(receiveCompletion: { print("첫번째 Future Completion: \($0)") },
+//          receiveValue: { print("첫번째 Future value: \($0)") })
+//    .store(in: &subscriptions)
+//
+//secondFuture
+//    .sink(receiveCompletion: { print("두번째 Future completion: \($0)") },
+//          receiveValue: { print("두번째 Future value: \($0)") })
+//    .store(in: &subscriptions)
+//
+//thirdFuture
+//    .sink(receiveCompletion: { print("세번째 Future completion: \($0)") },
+//          receiveValue: { print("세번째 Future value: \($0)") })
+//    .store(in: &subscriptions)
+//
+//thirdFuture
+//    .sink(receiveCompletion: { print("세번째 Future completion2: \($0)") },
+//          receiveValue: { print("세번째 Future value2: \($0)") })
+//    .store(in: &subscriptions)
 
-secondFuture
-    .sink(receiveCompletion: { print("두번째 Future completion: \($0)") },
-          receiveValue: { print("두번째 Future value: \($0)") })
-    .store(in: &subscriptions)
+print("----------------------------------Deferred-------------------------------------")
 
-thirdFuture
-    .sink(receiveCompletion: { print("세번째 Future completion: \($0)") },
-          receiveValue: { print("세번째 Future value: \($0)") })
-    .store(in: &subscriptions)
+struct DeferredPublisher: Publisher {
+    typealias Output = String
+    typealias Failure = Never
+    
+    func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, String == S.Input {
+        subscriber.receive("Deferred 여기야")
+        subscriber.receive(completion: .finished)
+    }
+}
 
-thirdFuture
-    .sink(receiveCompletion: { print("세번째 Future completion2: \($0)") },
-          receiveValue: { print("세번째 Future value2: \($0)") })
-    .store(in: &subscriptions)
+let deferred = Deferred {
+    print("deferredPublisher 가 만들어짐\n")
+    return DeferredPublisher()
+}
+
+deferred
+    .sink {
+        print($0)
+    } receiveValue: {
+        print($0)
+    }
+
