@@ -134,7 +134,7 @@ struct DeferredPublisher: Publisher {
     typealias Failure = Never
     
     func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, String == S.Input {
-        subscriber.receive("Deferred 여기야")
+        subscriber.receive("Deferred Publisher 여기야")
         subscriber.receive(completion: .finished)
     }
 }
