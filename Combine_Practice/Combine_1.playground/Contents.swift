@@ -151,3 +151,11 @@ deferred
         print($0)
     }
 
+print("----------------------------------AnyPublisher-------------------------------------")
+
+let originalPublisher = [1, nil , 3].publisher
+
+let anyPublisher = originalPublisher.eraseToAnyPublisher()
+anyPublisher.sink { value in
+    print(value)
+}
