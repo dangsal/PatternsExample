@@ -127,29 +127,7 @@ let thirdFuture = createFuture()
 //          receiveValue: { print("세번째 Future value2: \($0)") })
 //    .store(in: &subscriptions)
 
-print("----------------------------------Deferred-------------------------------------")
 
-struct DeferredPublisher: Publisher {
-    typealias Output = String
-    typealias Failure = Never
-    
-    func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, String == S.Input {
-        subscriber.receive("Deferred Publisher 여기야")
-        subscriber.receive(completion: .finished)
-    }
-}
-
-let deferred = Deferred {
-    print("deferredPublisher 가 만들어짐\n")
-    return DeferredPublisher()
-}
-
-deferred
-    .sink {
-        print($0)
-    } receiveValue: {
-        print($0)
-    }
 
 print("----------------------------------AnyPublisher-------------------------------------")
 
@@ -262,3 +240,53 @@ let anyCancellable2 = subject
 subject.send(5)
 anyCancellable2.cancel()
 
+print("--------------- Just --------------------")
+
+let just1 = Just([1, 2, 3])
+just1
+    .sink(receiveCompletion: { _ in
+        print("just 완료")
+    }, receiveValue: { value in
+        print(value)
+    })
+
+print("--------------- Future --------------------")
+
+func createFuture1() -> Future<Int, Never> {
+    return Future<Int, Never> { promise in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            promise(.success(52))
+        })
+    }
+}
+
+let future1 = createFuture1()
+    .sink(receiveCompletion: { completion in
+            print("완료 \(completion)")
+    }, receiveValue: { value in
+        print("Future: \(value)")
+    })
+
+print("----------------------------------Deferred-------------------------------------")
+
+struct DeferredPublisher: Publisher {
+    typealias Output = String
+    typealias Failure = Never
+    
+    func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, String == S.Input {
+        subscriber.receive("Deferred Publisher 여기야")
+        subscriber.receive(completion: .finished)
+    }
+}
+
+let deferred = Deferred {
+    print("deferredPublisher 가 만들어짐\n")
+    return DeferredPublisher()
+}
+
+deferred
+    .sink {
+        print($0)
+    } receiveValue: {
+        print($0)
+    }
