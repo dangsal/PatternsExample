@@ -183,3 +183,54 @@ originalPublisher
 anyPublisher.sink(receiveCompletion: { print("AnyPublisher completion: \($0)") },
                   receiveValue: { print("value : \($0)") }
 )
+
+
+print("----------------------------------Example-------------------------------------")
+
+var myIntArrayPublisher: Publishers.Sequence<[Int], Never> = [1, 2, 3].publisher
+
+myIntArrayPublisher.sink(receiveCompletion: { completion in
+    switch completion {
+    case .finished:
+        print("완료")
+    case .failure(let error):
+        print("실패 \(error.localizedDescription)")
+    }
+}, receiveValue: { value in
+    print("값: \(value)")
+})
+
+print("---------------")
+var myNotification = Notification.Name("com.combine.notification")
+var myDefaultPublisher: NotificationCenter.Publisher = NotificationCenter.default.publisher(for: myNotification)
+
+var mySubscription: AnyCancellable?
+
+var mySubscriptionSet = Set<AnyCancellable>()
+
+mySubscription = myDefaultPublisher.sink(receiveCompletion: { completion in
+    switch completion {
+    case .finished:
+        print("완료")
+    case .failure(let error):
+        print("실패 \(error.localizedDescription)")
+    }
+}, receiveValue: { value in
+    print("값: \(value)")
+})
+
+mySubscription?.store(in: &mySubscriptionSet)
+
+NotificationCenter.default.post(Notification(name: myNotification))
+
+mySubscription?.cancel()
+
+class MyFriend {
+    var name = "철수" {
+        didSet {
+            print("name이 바겼다 \(name)")
+        }
+    }
+}
+var myFriend = MyFriend()
+var myFriendSubscription: AnyCancellable = ["영수"].publisher.assign(to: \.name, on: myFriend)
