@@ -234,3 +234,31 @@ class MyFriend {
 }
 var myFriend = MyFriend()
 var myFriendSubscription: AnyCancellable = ["영수"].publisher.assign(to: \.name, on: myFriend)
+
+print("--------------- AnyCancellable --------------------")
+
+let subject = PassthroughSubject<Int, Never>()
+let anyCancellable = subject
+    .sink(receiveCompletion: { completion in
+        print("completion: \(completion)")
+    }, receiveValue: { value in
+        print("value: \(value)")
+    })
+
+subject.send(1)
+anyCancellable.cancel()
+subject.send(2)
+
+let anyCancellable2 = subject
+    .handleEvents(
+        receiveCancel: {
+            print("cancel 불렀음")
+        })
+    .sink(receiveCompletion: { completion in
+        print("completion: \(completion)")
+    }, receiveValue: { value in
+        print("value: \(value)")
+    })
+subject.send(5)
+anyCancellable2.cancel()
+
