@@ -16,6 +16,7 @@
 		D7884FE12A2D761D00F031DA /* combine_textfield_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7884FE02A2D761D00F031DA /* combine_textfield_tutorialTests.swift */; };
 		D7884FEB2A2D761D00F031DA /* combine_textfield_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7884FEA2A2D761D00F031DA /* combine_textfield_tutorialUITests.swift */; };
 		D7884FED2A2D761D00F031DA /* combine_textfield_tutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7884FEC2A2D761D00F031DA /* combine_textfield_tutorialUITestsLaunchTests.swift */; };
+		D7884FFE2A2D790000F031DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7884FFD2A2D790000F031DA /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D7884FE62A2D761D00F031DA /* combine_textfield_tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = combine_textfield_tutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7884FEA2A2D761D00F031DA /* combine_textfield_tutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = combine_textfield_tutorialUITests.swift; sourceTree = "<group>"; };
 		D7884FEC2A2D761D00F031DA /* combine_textfield_tutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = combine_textfield_tutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7884FFD2A2D790000F031DA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		D7884FFA2A2D763000F031DA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D7884FFD2A2D790000F031DA /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				D7884FCE2A2D761B00F031DA /* ViewController.swift in Sources */,
 				D7884FCA2A2D761B00F031DA /* AppDelegate.swift in Sources */,
+				D7884FFE2A2D790000F031DA /* ViewModel.swift in Sources */,
 				D7884FCC2A2D761B00F031DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
