@@ -159,3 +159,27 @@ let anyPublisher = originalPublisher.eraseToAnyPublisher()
 anyPublisher.sink { value in
     print(value)
 }
+
+print("----------------------------------Empty-------------------------------------")
+
+let empty = Empty<String, Never>()
+empty
+    .sink {
+        print("completion: \($0)")
+    } receiveValue: { value in
+        print(value)
+    }
+
+originalPublisher
+    .flatMap { value -> AnyPublisher<Int, Never> in
+        if let value = value {
+            return Just(value).eraseToAnyPublisher()
+        } else {
+            return Empty().eraseToAnyPublisher()
+        }
+    }.eraseToAnyPublisher()
+
+
+anyPublisher.sink(receiveCompletion: { print("AnyPublisher completion: \($0)") },
+                  receiveValue: { print("value : \($0)") }
+)
