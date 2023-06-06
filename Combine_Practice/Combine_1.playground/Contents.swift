@@ -290,3 +290,28 @@ deferred
     } receiveValue: {
         print($0)
     }
+
+
+print("----------------------------------CurrentValueSubject-------------------------------------")
+
+let currentValueSubject = CurrentValueSubject<String, Never>("Dangsal 의 첫번째 값")
+
+currentValueSubject
+    .sink(receiveCompletion: { print("1 번째 sink completion: \($0)") },
+          receiveValue: { print("1 번째 sink value: \($0)") } )
+
+currentValueSubject
+    .sink(receiveCompletion: { print("2 번째 sink completion: \($0)") },
+          receiveValue: { print("2 번째 sink value: \($0)") })
+
+currentValueSubject
+    .sink(receiveCompletion: { print("3 번째 sink completion: \($0)") },
+          receiveValue: { print("3 번째 sink value: \($0)") })
+
+
+currentValueSubject.send("Dangsal 의 두번째 값")
+currentValueSubject.send(completion: .finished)
+
+print(currentValueSubject.value)
+
+print("----------------------------------sink-------------------------------------")
