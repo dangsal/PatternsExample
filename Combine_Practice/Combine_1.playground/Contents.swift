@@ -315,3 +315,14 @@ currentValueSubject.send(completion: .finished)
 print(currentValueSubject.value)
 
 print("----------------------------------sink-------------------------------------")
+
+let intArrayPublisher = [1, 2, 3, 4, 5].publisher
+
+let sink = Subscribers.Sink<Int, Never>(receiveCompletion: { print("completion: \($0)") },
+                                        receiveValue: { print("value: \($0)") })
+intArrayPublisher.subscribe(sink)
+
+intArrayPublisher
+    .sink(receiveCompletion: { print("completion: \($0)") },
+          receiveValue: { print("value: \($0)") } )
+
