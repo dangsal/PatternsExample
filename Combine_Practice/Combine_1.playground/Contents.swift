@@ -147,8 +147,8 @@ empty
     } receiveValue: { value in
         print(value)
     }
-
-originalPublisher
+print("-")
+let anyPublisher1 = [1, nil , 3].publisher
     .flatMap { value -> AnyPublisher<Int, Never> in
         if let value = value {
             return Just(value).eraseToAnyPublisher()
@@ -158,7 +158,7 @@ originalPublisher
     }.eraseToAnyPublisher()
 
 
-anyPublisher.sink(receiveCompletion: { print("AnyPublisher completion: \($0)") },
+anyPublisher1.sink(receiveCompletion: { print("AnyPublisher completion: \($0)") },
                   receiveValue: { print("value : \($0)") }
 )
 
@@ -260,12 +260,12 @@ func createFuture1() -> Future<Int, Never> {
     }
 }
 
-let future1 = createFuture1()
-    .sink(receiveCompletion: { completion in
-            print("완료 \(completion)")
-    }, receiveValue: { value in
-        print("Future: \(value)")
-    })
+//let future1 = createFuture1()
+//    .sink(receiveCompletion: { completion in
+//            print("완료 \(completion)")
+//    }, receiveValue: { value in
+//        print("Future: \(value)")
+//    })
 
 print("----------------------------------Deferred-------------------------------------")
 
