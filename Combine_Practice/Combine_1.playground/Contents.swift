@@ -355,3 +355,9 @@ let assgin = Subscribers.Assign<SampleObject, Int>(object: myObject, keyPath: \.
 let intArrayPublisher4 = [6, 6, 1, 2].publisher
 intArrayPublisher4.subscribe(assgin)
 print(myObject.intValue)
+print("----------------------assgin Operator-----------------------------------------")
+
+let intArrayPublisher5 = [1, 2, 3, 4 ,6].publisher
+    .assign(to: \.intValue, on: myObject)
+
+print(myObject.intValue)
