@@ -395,3 +395,13 @@ let publisher13 = [2, 3, 4, 5].publisher
 publisher13
     .print()
     .subscribe(DemandTestSubscriber())
+
+print("------------------- cancel() ----------------------")
+
+var subscription = Set<AnyCancellable>()
+
+let stringArray: [String] = ["dang", "sal"]
+
+stringArray.publisher
+    .sink(receiveValue: { print($0) } )
+    .store(in: &subscription)
