@@ -326,3 +326,32 @@ intArrayPublisher
     .sink(receiveCompletion: { print("completion: \($0)") },
           receiveValue: { print("value: \($0)") } )
 
+print("----------------------------------sink cancel -------------------------------------")
+
+
+
+print("----------------------assgin-----------------------------------------")
+
+class SampleObject {
+    var intValue: Int {
+        didSet {
+            print("intValue Changed: \(intValue)")
+        }
+    }
+    
+    init(intValue: Int) {
+        self.intValue = intValue
+    }
+    
+    deinit {
+        print("sample object deinit")
+    }
+}
+
+let myObject = SampleObject(intValue: 5)
+
+let assgin = Subscribers.Assign<SampleObject, Int>(object: myObject, keyPath: \.intValue)
+
+let intArrayPublisher4 = [6, 6, 1, 2].publisher
+intArrayPublisher4.subscribe(assgin)
+print(myObject.intValue)
