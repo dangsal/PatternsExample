@@ -361,3 +361,37 @@ let intArrayPublisher5 = [1, 2, 3, 4 ,6].publisher
     .assign(to: \.intValue, on: myObject)
 
 print(myObject.intValue)
+
+print("-------------------------Demand------------------------")
+
+class DemandTestSubscriber: Subscriber {
+    typealias Input = Int
+    typealias Failure = Never
+    
+    func receive(subscription: Subscription) {
+        print("subscribe 시작!")
+        // 여기서 Demand를 설정해줄 수도 있어요!
+        // 현재 요청횟수는 1
+        subscription.request(.max(1))
+    }
+    
+    func receive(_ input: Int) -> Subscribers.Demand {
+        print("receive input: \(input)")
+        
+        // input 값이 2일때만 요청횟수를 1 추가합니다.
+        if input == 2 {
+            return .max(1)
+        } else {
+            return .none
+        }
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {
+        print("receive completion: \(completion)")
+    }
+}
+
+let publisher13 = [2, 3, 4, 5].publisher
+publisher13
+    .print()
+    .subscribe(DemandTestSubscriber())
