@@ -1,13 +1,13 @@
 //
-//  combine_textfield_tutorialUITestsLaunchTests.swift
-//  combine_textfield_tutorialUITests
+//  Combine_Example_1UITestsLaunchTests.swift
+//  Combine_Example_1UITests
 //
-//  Created by 이성호 on 2023/06/05.
+//  Created by 이성호 on 2023/06/06.
 //
 
 import XCTest
 
-final class combine_textfield_tutorialUITestsLaunchTests: XCTestCase {
+final class Combine_Example_1UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

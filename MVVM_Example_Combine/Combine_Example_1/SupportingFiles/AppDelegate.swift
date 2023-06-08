@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  combine_textfield_tutorial
+//  Combine_Example_1
 //
-//  Created by 이성호 on 2023/06/05.
+//  Created by 이성호 on 2023/06/06.
 //
 
 import UIKit
