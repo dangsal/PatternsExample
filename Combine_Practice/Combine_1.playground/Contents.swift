@@ -405,3 +405,13 @@ let stringArray: [String] = ["dang", "sal"]
 stringArray.publisher
     .sink(receiveValue: { print($0) } )
     .store(in: &subscription)
+
+print("------------------- map ----------------------")
+
+let intPulisherMap = [1, 2 ,3 ,4 ,5 ,6 ,7].publisher
+
+intPulisherMap
+    .map { element in
+        return element * 2
+    }
+    .sink(receiveValue: { print($0) })
