@@ -5,6 +5,7 @@
 //  Created by 이성호 on 2023/06/12.
 //
 
+import Combine
 import UIKit
 
 final class ViewController: UIViewController {
@@ -42,15 +43,24 @@ final class ViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("확인입니다.", for: .normal)
-        button.backgroundColor = .systemOrange
+        button.isEnabled = false
+        button.backgroundColor = button.isEnabled ? .systemOrange : .systemGray
         return button
     }()
+    
+    // MARK: - property
+    
+    private var viewModel: ViewModel?
+    private var subscriptions = Set<AnyCancellable>()
 
     // MARK: - life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
+        self.setupViewModel()
+        self.setupAction()
+        self.setupBindings()
     }
     
     // MARK: - func
@@ -80,6 +90,49 @@ final class ViewController: UIViewController {
         self.nextButton.trailingAnchor.constraint(equalTo: self.userPasswordConfirmTextField.trailingAnchor).isActive = true
         self.nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+    
+    private func setupViewModel() {
+        self.viewModel = ViewModel()
+    }
+    
+    private func setupAction() {
+        self.userNameTextField.addTarget(self, action: #selector(userNameTextFieldDidChange(_:)), for: .editingChanged)
+        self.userPasswordTextField.addTarget(self, action: #selector(userPasswordTextFieldDidChange(_:)), for: .editingChanged)
+        self.userPasswordConfirmTextField.addTarget(self, action: #selector(userPasswordConfirmTextFieldDidChange(_:)), for: .editingChanged)
+        self.nextButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
+    }
+    
+    private func setupBindings() {
+        self.viewModel?.isVaildPublisher
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] isVaild in
+                self?.nextButton.backgroundColor = isVaild ? .systemOrange : .systemGray
+                self?.nextButton.isEnabled = isVaild
+                
+            })
+            .store(in: &subscriptions)
+    }
 
+    // MARK: - selector
+    
+    @objc
+    private func userNameTextFieldDidChange(_ textField: UITextField) {
+        self.viewModel?.userName = textField.text ?? ""
+    }
+    
+    @objc
+    private func userPasswordTextFieldDidChange(_ textField: UITextField) {
+        self.viewModel?.userPassword = textField.text ?? ""
+    }
+    
+    @objc
+    private func userPasswordConfirmTextFieldDidChange(_ textField: UITextField) {
+        self.viewModel?.userPasswordConfirm = textField.text ?? ""
+    }
+    
+    @objc
+    private func nextButtonDidTap() {
+        self.viewModel?.nextButtonDidTap()
+    }
 }
 
