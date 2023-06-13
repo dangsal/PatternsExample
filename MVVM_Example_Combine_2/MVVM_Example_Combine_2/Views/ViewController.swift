@@ -111,6 +111,16 @@ final class ViewController: UIViewController {
                 
             })
             .store(in: &subscriptions)
+        
+        self.viewModel?.buttonTapPublisher
+            .sink { [weak self] _ in
+                self?.buttonDidTap()
+            }
+            .store(in: &subscriptions)
+    }
+    
+    private func buttonDidTap() {
+        self.viewModel?.nextButtonDidTap()
     }
 
     // MARK: - selector
@@ -132,7 +142,7 @@ final class ViewController: UIViewController {
     
     @objc
     private func nextButtonDidTap() {
-        self.viewModel?.nextButtonDidTap()
+        self.viewModel?.buttonTapPublisher.send()
     }
 }
 

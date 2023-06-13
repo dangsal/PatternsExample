@@ -22,6 +22,9 @@ final class ViewModel {
             .eraseToAnyPublisher()
     }
     
+    let buttonTapPublisher = PassthroughSubject<Void, Never>()
+    
+    
     func nextButtonDidTap() {
         print(userName, userPassword, userPasswordConfirm)
     }
