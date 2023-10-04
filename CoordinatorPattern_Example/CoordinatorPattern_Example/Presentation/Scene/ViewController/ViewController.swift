@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - ui component
+    
     private let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("다음 뷰로 넘어가기", for: .normal)
@@ -17,6 +19,10 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    // MARK: - property
+    
+    weak var coordinator: ViewCoordinator?
 
     // MARK: - life cycle
     
@@ -48,7 +54,7 @@ class ViewController: UIViewController {
     
     private func setupAction() {
         let didTapNextButton = UIAction { [weak self] _ in
-            self?.pushSecondeViewController()
+            self?.coordinator?.pushSecondViewController()
         }
         self.nextButton.addAction(didTapNextButton, for: .touchUpInside)
     }

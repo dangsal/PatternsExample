@@ -9,6 +9,9 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
+    // MARK: - property
+    
+    weak var coordinator: SecondCoordinator?
     // MARK: - life cycle
     
     override func viewDidLoad() {
