@@ -12,6 +12,13 @@ final class SecondViewController: UIViewController {
     // MARK: - property
     
     weak var coordinator: SecondCoordinator?
+    
+    // MARK: - init
+    
+    deinit {
+        self.coordinator?.pop()
+    }
+    
     // MARK: - life cycle
     
     override func viewDidLoad() {

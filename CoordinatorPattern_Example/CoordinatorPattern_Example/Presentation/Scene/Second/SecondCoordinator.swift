@@ -23,4 +23,8 @@ final class SecondCoordinator: Coordinator {
         viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func pop() {
+        self.parentCoordinator?.removeChildCoordinator(self)
+    }
 }

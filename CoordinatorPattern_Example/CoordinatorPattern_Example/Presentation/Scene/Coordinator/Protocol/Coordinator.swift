@@ -11,3 +11,14 @@ protocol Coordinator: AnyObject {
     var childCoordinator: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
 }
+
+extension Coordinator {
+    func removeChildCoordinator(_ child: Coordinator) {
+        for (index, coordintor) in childCoordinator.enumerated() {
+            if coordintor === child {
+                childCoordinator.remove(at: index)
+                break
+            }
+        }
+    }
+}
