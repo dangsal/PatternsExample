@@ -18,6 +18,10 @@
 		D7BEB72F2ACD475200119827 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB72E2ACD475200119827 /* HomeViewModel.swift */; };
 		D7BEB7342ACD496800119827 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB7332ACD496800119827 /* UIView+Preview.swift */; };
 		D7BEB7372ACD49E600119827 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB7362ACD49E600119827 /* UIControl.swift */; };
+		D7BEB73B2ACD6A3000119827 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB73A2ACD6A3000119827 /* SettingViewController.swift */; };
+		D7BEB73D2ACD6AAD00119827 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB73C2ACD6AAD00119827 /* SettingView.swift */; };
+		D7BEB73F2ACD6D2200119827 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB73E2ACD6D2200119827 /* SettingViewModel.swift */; };
+		D7BEB7452ACD6F3E00119827 /* ChangeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEB7442ACD6F3E00119827 /* ChangeNicknameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		D7BEB72E2ACD475200119827 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D7BEB7332ACD496800119827 /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		D7BEB7362ACD49E600119827 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		D7BEB73A2ACD6A3000119827 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D7BEB73C2ACD6AAD00119827 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		D7BEB73E2ACD6D2200119827 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		D7BEB7442ACD6F3E00119827 /* ChangeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,7 @@
 		D7BEB7202ACD44C700119827 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D7BEB7402ACD6F1E00119827 /* ChangeNickname */,
 				D7BEB7232ACD45EC00119827 /* SettingScene */,
 				D7BEB7222ACD45E500119827 /* HomeScene */,
 			);
@@ -211,6 +220,7 @@
 		D7BEB7282ACD463300119827 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D7BEB73E2ACD6D2200119827 /* SettingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 		D7BEB7292ACD463700119827 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D7BEB73A2ACD6A3000119827 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 		D7BEB72A2ACD463A00119827 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7BEB73C2ACD6AAD00119827 /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +279,38 @@
 				D7BEB7362ACD49E600119827 /* UIControl.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		D7BEB7402ACD6F1E00119827 /* ChangeNickname */ = {
+			isa = PBXGroup;
+			children = (
+				D7BEB7432ACD6F3000119827 /* Coordinator */,
+				D7BEB7422ACD6F2D00119827 /* View */,
+				D7BEB7412ACD6F2800119827 /* ViewController */,
+			);
+			path = ChangeNickname;
+			sourceTree = "<group>";
+		};
+		D7BEB7412ACD6F2800119827 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7BEB7442ACD6F3E00119827 /* ChangeNicknameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D7BEB7422ACD6F2D00119827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7BEB7432ACD6F3000119827 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +444,11 @@
 			files = (
 				D7BEB7372ACD49E600119827 /* UIControl.swift in Sources */,
 				D7BEB6F42ACD44B500119827 /* HomeController.swift in Sources */,
+				D7BEB7452ACD6F3E00119827 /* ChangeNicknameViewController.swift in Sources */,
 				D7BEB72D2ACD46B100119827 /* HomeView.swift in Sources */,
+				D7BEB73D2ACD6AAD00119827 /* SettingView.swift in Sources */,
+				D7BEB73B2ACD6A3000119827 /* SettingViewController.swift in Sources */,
+				D7BEB73F2ACD6D2200119827 /* SettingViewModel.swift in Sources */,
 				D7BEB6F02ACD44B500119827 /* AppDelegate.swift in Sources */,
 				D7BEB72F2ACD475200119827 /* HomeViewModel.swift in Sources */,
 				D7BEB6F22ACD44B500119827 /* SceneDelegate.swift in Sources */,

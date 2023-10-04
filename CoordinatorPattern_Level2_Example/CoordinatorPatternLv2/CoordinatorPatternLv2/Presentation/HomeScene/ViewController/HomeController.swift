@@ -65,10 +65,15 @@ final class HomeController: UIViewController {
     
     private func bindView() {
         self.homeView.didTapSettingPublisher
-            .sink {
-                print("Here")
+            .sink { [weak self] _ in
+                self?.pushSettingViewController()
             }
             .store(in: &self.cancellable)
+    }
+    
+    private func pushSettingViewController() {
+        let viewController = SettingViewController(viewModel: SettingViewModel())
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
